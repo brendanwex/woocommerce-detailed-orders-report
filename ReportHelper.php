@@ -71,7 +71,7 @@ class ReportHelper
         $args = array(
             'post_type' => 'shop_order',
             'posts_per_page' => -1,
-            'post_status' => array('completed', 'processing'),
+            'post_status' => array('wc-completed', 'wc-processing'),
         );
 
         if ($current_range == "month") {
@@ -154,7 +154,7 @@ class ReportHelper
                 }
 
 
-                $result = array('order_id' => $order->get_order_number(), 'order_date' => get_the_date(), 'customer' => $customer_name, 'total' => $order->get_total(), 'payment_method' => $order->get_payment_method(), 'address' => $address);
+                $result = array('order_id' => $order->get_order_number(), 'order_date' => get_the_date(), 'customer' => $customer_name, 'total' => $order->get_total(), 'payment_method' => $order->get_payment_method(), 'address' => $address, 'status' => $order->get_status());
 
                 array_push($results, $result);
 
