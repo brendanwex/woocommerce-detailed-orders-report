@@ -82,6 +82,8 @@ class WC_Report_Orders_Detailed extends WC_Admin_Report
                 <th><strong>Address</strong></th>
 
                 <th><strong>Payment Method</strong></th>
+                <th><strong>Payment Status</strong></th>
+
                 <th><strong>Total</strong></th>
             </tr>
             </thead>
@@ -98,6 +100,8 @@ class WC_Report_Orders_Detailed extends WC_Admin_Report
                     <td><?php echo $order['address']; ?></td>
 
                     <td><?php echo $order['payment_method']; ?></td>
+                    <td><?php echo $order['status']; ?></td>
+
                     <td><?php echo $order['total']; ?></td>
                 </tr>
             <?php } ?>
